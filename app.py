@@ -12,11 +12,11 @@ def sayhi():
       json_data = request.get_json()
       #json_data = json.loads(json_data)
 
-      data = [[json_data['sodium'], json_data['vitamin_a'], 0, 0, 0, 0, json_data['vitamin_d'], json_data['calcium'], json_data['caffeine'], 0]]
+      data = [[int(json_data['sodium']), int(json_data['vitamin_a']), 0, 0, 0, 0, int(json_data['vitamin_d']), int(json_data['calcium']), int(json_data['caffeine']), 0]]
       #df = pd.DataFrame(data)
       output=trying_to_predict_life(data)
 
-      #print (output)
+      print (output)
       #print(type(output))
 
       lis = output.tolist()
