@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 def sayhi():
   if request.method=='POST':
-      json_data = request.get_json()
+      json_data = request.get_json(force=True)
       #json_data = json.loads(json_data)
 
       data = [[int(json_data['sodium']), int(json_data['vitamin_a']), 0, 0, 0, 0, int(json_data['vitamin_d']), int(json_data['calcium']), int(json_data['caffeine']), 0]]
